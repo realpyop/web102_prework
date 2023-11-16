@@ -5,6 +5,7 @@
 */
 
 // import the JSON data about the crowd funded games from the games.js file
+import games from './games.js';
 import GAMES_DATA from './games.js';
 
 // create a list of objects to store the data about the games using JSON.parse
@@ -46,13 +47,14 @@ function addGamesToPage(games) {
             <img ${game.img} class="game-img"> 
         `;
         // append the game to the games-container
-        document.body.appendChild(gameCard); 
+        document.gamesContainer.appendChild(gameCard); 
     }
-}   
+}
 
+ 
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
-
+addGamesToPage(games)
 
 /*************************************************************************************
  * Challenge 4: Create the summary statistics at the top of the page displaying the
